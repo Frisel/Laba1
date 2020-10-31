@@ -3,6 +3,7 @@
 #include <vector>
 #include <ctime>
 #include <iomanip>
+#include "Funkc.h"
 
 using namespace std;
 int main() {
@@ -32,6 +33,10 @@ int main() {
 	cout << "array = ";
 	for (int count = 0; count < k; count++)
 		cout << setprecision(2) << ptrarray[count] << "    ";
+	ofstream kei("kei.txt");
+	for (int i = 0; i < k; i++)
+		kei << ptrarray[i];
+	kei.close();
 	delete[] ptrarray; // высвобождение памяти
 	cout << endl;
 	//////////////////////////////////////////
